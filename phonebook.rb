@@ -50,6 +50,7 @@ def delete()
     puts "Please type in the name you would like to remove."
     name = gets.chomp.capitalize
     $phonebook.delete(name)
+    view()
 end
 
 #first line of code that runs
