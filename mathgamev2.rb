@@ -7,7 +7,7 @@ def startGame()
     user_input.downcase!
 
     if user_input.include? 'add'
-        addGame    
+        addGame
     elsif user_input.include? 'subtract'
         subtractGame
     elsif user_input.include?'multiply'
@@ -24,7 +24,7 @@ end
 
 #Method for addition game. Takes two random numbers and adds them. Asks for an answer.
 def addGame()
-    system 'clear'
+    3.times {system 'clear'
     num1 = Random.rand(0..10)
     num2 = Random.rand(0..10)
     correct = num1 + num2
@@ -34,7 +34,9 @@ def addGame()
         puts "Correct! The answer to #{num1} + #{num2} = #{correct}"
     else
         puts "Incorrect!"
-    end
+    end}
+
+    
 
     #Asks user if they would like to play again.
 puts"Would you like to play again? (yes|no|restart)"
@@ -52,7 +54,7 @@ end
 
 #Method for subtraction game. Takes two random numbers and subtracts them.
 def subtractGame()
-    system 'clear'
+    3.times {system 'clear'
     num1 = Random.rand(0..10)
     num2 = Random.rand(0..10)
     correct = num1 - num2
@@ -62,7 +64,7 @@ def subtractGame()
         puts "Correct! The answer to #{num1} - #{num2} = #{correct}"
     else
         puts "Incorrect!"
-    end
+    end}
 
     #Asks user if they would like to play again.
 puts"Would you like to play again? (yes|no|restart)"
@@ -80,7 +82,7 @@ end
 
 #Method for multiplication game. Takes two random numbers and multiplies them.
 def multiplyGame()
-    system 'clear'
+    3.times {system 'clear'
     num1 = Random.rand(0..10)
     num2 = Random.rand(0..10)
     correct = num1 * num2
@@ -90,9 +92,9 @@ def multiplyGame()
         puts "Correct! The answer to #{num1} x #{num2} = #{correct}"
     else
         puts "Incorrect!"
-    end
+    end}
 
-    #Asks user if they would like to play again.
+    # Asks user if they would like to play again.
 puts"Would you like to play again? (yes|no|restart)"
 continue = gets.chomp.downcase
 if continue.include? 'yes'
@@ -108,7 +110,7 @@ end
 
 #Method for division game. Takes two random numbers and divides them. Asks for an answer.
 def divisionGame()
-    system 'clear'
+    3.times {system 'clear'
     num1 = Random.rand(0..10)
     num2 = Random.rand(1..10)
     correct = num1 / num2
@@ -118,7 +120,7 @@ def divisionGame()
         puts "Correct! The answer to #{num1} / #{num2} = #{correct}"
     else
         puts "Incorrect!"
-    end
+    end}
 
     #Asks user if they would like to play again.
 puts"Would you like to play again? (yes|no|restart)"
