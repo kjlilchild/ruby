@@ -1,39 +1,40 @@
 class CreditCard
+	#Credit Limit and Balance for Card
 	@outstandingBalance
 	@@creditLimit = 1000.00
 
 	def initialize
-		@outstandingBalance = 0
+		@outstandingBalance = 0.00
 	end
 
 	def bal
-		return @outstandingBalance
+		return @@creditLimit - @outstandingBalance
 	end
 
 	def add(amt)
 		@outstandingBalance += amt
-		if @outstandingBalance > amt && @outstandingBalance < @@creditLimit
-		end
-		balance = @@creditLimit - @outstandingBalance
-		balance.to_f
-		puts "After your purchase of $#{amt}. Your Balance is: #{balance}"
+		puts @outstandingBalance
+		
 	end
+
+		
 		
 	
 
 	def pay(amt)
 		@outstandingBalance -= amt
-		balance = @@creditLimit - @outstandingBalance
-		puts "After your payment of $#{amt}. Your Balance is: #{balance}"
+		puts @outstandingBalance
 	end
 end
 
 
 myCard = CreditCard.new
-myCard.add(700)
-myCard.add(100)
-myCard.pay(500)
-myCard.pay(600)
+myCard.add(1000)
+myCard.pay(533)
+puts myCard.bal
+
+
+
 
 
 
